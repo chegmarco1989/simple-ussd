@@ -1,14 +1,45 @@
 ## This is a demo app written in PHP to demonstrate how to read and respond to USSD requests.
 ## This demo app requires PHP 5.2.0 or later.
+ 
+## Example:
+### Lets pretend that we placed ```http://localhost/ussd/index.php``` as our callback URL.
+### To start: ```http://localhost/ussd/index.php?text=```
+```
+Welcome to KKF-KENYA.  
+1. Events 
+2. Tournaments 
+3. Results 
+```
+### To choose option 3 ```http://localhost/ussd/index.php?text=3```
+```
+---For 2017---
+1. Funakoshi Tournament
+2. Kenya Open
+3. Nairobi Open
+4. JKUAT Open
+```
+### To choose option 1 of 3 ```http://localhost/ussd/index.php?text=3*1```
+```
+--- Funakoshi Tournament ---
+CATEGORIES: 
+1. Kata
+2. Kumite
+```
+### to choose 1 of 3 of 1 ```http://localhost/ussd/index.php?text=3*1*1```
+```
+--- Funakoshi Tournament: Kata ---
+Top 4 only
+SENIORS: 
+1. John Doe
+2. Jane Doe
+3. Jackie Doe
+4. Lucky Doe
+```
 
-## Lets pretend that we placed ```http://localhost/ussd/index.php``` as our callback URL.
-
-## To start: ```http://localhost/ussd/index.php?text=```
-
+------------------------------------------------
 Here is the expected workflow of the simple app:
-
 Begin at STEP 1.
-
+------------------------------------------------
 ## STEP 1:
 
 Display the following menu and wait for a response:  
